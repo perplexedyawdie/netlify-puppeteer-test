@@ -7,9 +7,8 @@ export default async function handler(req, res) {
     console.log(executablePath)
     // setup
     const browser = await puppeteer.launch({
-      args: chromium.args,
-      executablePath: '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
-      headless: chromium.headless,
+      executablePath: '../../node_modules/chromium/lib/chromium/chrome-linux/chrome',
+      headless: true,
     })
 
   res.status(200).json({ name: 'John Doe' })
