@@ -9,6 +9,6 @@
 [[plugins]]
     package = "netlify-plugin-chromium"
         [plugins.inputs]
-            packageManager = "yarn"
+            packageManager = "npm"
             setChromePathInEnv = "true"
             failBuildOnError = "true"
