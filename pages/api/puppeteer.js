@@ -3,10 +3,11 @@ import chromium from 'chromium'
 import path from 'path'
 const fs = require( 'fs' );
 const log = console.log;
-const folder = './';
+const folder = './opt';
 export default async function handler(req, res) {
     // setup
-    console.log(process.env)
+    console.log(process.env.CHROME_PATH)
+    console.log(chromium.path)
     console.log(__dirname)
     fs.readdirSync( folder ).forEach( file => {
    
@@ -21,7 +22,7 @@ export default async function handler(req, res) {
      
      });
     const browser = await puppeteer.launch({
-      executablePath: '/var/task/node_modules/chromium/lib/chromium/chrome-linux/chrome',
+      executablePath: '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
       headless: true,
     })
 
