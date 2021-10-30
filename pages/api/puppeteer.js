@@ -22,7 +22,7 @@ export default async function handler(req, res) {
      
      });
     const browser = await puppeteer.launch({
-      executablePath: '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
+      executablePath: '../../../node_modules/chromium/lib/chromium/chrome-linux/chrome',
       headless: true,
     })
 
