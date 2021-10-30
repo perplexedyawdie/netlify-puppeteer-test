@@ -1,10 +1,25 @@
 import puppeteer from 'puppeteer-core'
 import chromium from 'chromium'
 import path from 'path'
+const fs = require( 'fs' );
+const log = console.log;
+const folder = './';
 export default async function handler(req, res) {
     // setup
     console.log(process.env.CHROME_PATH)
     console.log(__dirname)
+    fs.readdirSync( folder ).forEach( file => {
+   
+        const extname = path.extname( file );
+        const filename = path.basename( file, extname );
+        const absolutePath = path.resolve( folder, file );
+     
+        log( "File : ", file );
+        log( "filename : ", filename );
+        log( "extname : ", extname );
+        log( "absolutePath : ", absolutePath);
+     
+     });
     const browser = await puppeteer.launch({
       executablePath: '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
       headless: true,
