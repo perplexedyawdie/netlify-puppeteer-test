@@ -3,7 +3,8 @@
   node_bundler = "esbuild"
   external_node_modules = [
     "puppeteer-extra", 
-    "next"
+    "next",
+    "chrome-aws-lambda"
   ]
 
 [[plugins]]

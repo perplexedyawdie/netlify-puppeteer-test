@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     // setup
     const browser = await chromium.puppeteer.launch({
       args: chromium.args,
-      executablePath: '/var/task/.netlify/functions-internal/bin/chromium.br',
+      executablePath: executablePath,
       headless: chromium.headless,
     })
 
