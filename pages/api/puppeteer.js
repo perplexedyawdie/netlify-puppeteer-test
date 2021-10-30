@@ -1,10 +1,10 @@
 import puppeteer from 'puppeteer-core'
-
+import chromium from 'chromium'
 
 export default async function handler(req, res) {
     // setup
     const browser = await puppeteer.launch({
-      executablePath: '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
+      executablePath: chromium.path,
       headless: true,
     })
 

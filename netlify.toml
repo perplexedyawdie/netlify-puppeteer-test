@@ -10,5 +10,8 @@
     package = "netlify-plugin-chromium"
         [plugins.inputs]
             packageManager = "npm"
-            setChromePathInEnv = "false"
+            setChromePathInEnv = "true"
             failBuildOnError = "true"
+
+[[plugins]]
+    package = "@netlify/plugin-nextjs"
