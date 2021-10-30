@@ -5,7 +5,7 @@ import puppeteer from 'puppeteer-core'
 export default async function handler(req, res) {
     const executablePath = await chromium.executablePath
     // setup
-    const browser = await puppeteer.launch({
+    const browser = await chromium.puppeteer.launch({
       args: chromium.args,
       executablePath: executablePath,
       headless: chromium.headless,
