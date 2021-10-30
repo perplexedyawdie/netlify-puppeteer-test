@@ -6,7 +6,7 @@ const log = console.log;
 const folder = './';
 export default async function handler(req, res) {
     // setup
-    console.log(process.env.CHROME_PATH)
+    console.log(process.env)
     console.log(__dirname)
     fs.readdirSync( folder ).forEach( file => {
    
@@ -21,7 +21,7 @@ export default async function handler(req, res) {
      
      });
     const browser = await puppeteer.launch({
-      executablePath: '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
+      executablePath: '/var/task/node_modules/chromium/lib/chromium/chrome-linux/chrome',
       headless: true,
     })
 
