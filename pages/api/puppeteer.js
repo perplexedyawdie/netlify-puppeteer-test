@@ -6,9 +6,9 @@ export default async function handler(req, res) {
     const executablePath = await chromium.executablePath
     console.log(executablePath)
     // setup
-    const browser = await chromium.puppeteer.launch({
+    const browser = await puppeteer.launch({
       args: chromium.args,
-      executablePath: executablePath,
+      executablePath: '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
       headless: chromium.headless,
     })
 
